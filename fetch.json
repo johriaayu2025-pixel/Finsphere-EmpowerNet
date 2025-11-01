@@ -1,0 +1,11 @@
+useEffect(() => {
+  fetch('https://hywuddqzrlcvbxvurpoh.supabase.co/functions/v1/finance-insights', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ userId: 'demo-user-123' })
+  })
+  .then(res => res.json())
+  .then(data => console.log('API Response:', data))
+  .catch(err => console.error('Error:', err));
+}, []);
+
